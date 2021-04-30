@@ -24,12 +24,25 @@ class Timer extends Component {
 
     
   tick() {
-    this.interval = setInterval(() => {
-        this.setState(prevState => ({
-          seconds: document.getElementById("ppt").value++
-        }));
-      }, 1000);
-    }
+    
+        if(this.state.interval) {
+            return
+        }
+        const interval = setInterval(
+            ()=> {
+                this.setState({
+                    seconds:document.getElementById("ppt").value++
+                })
+            },1000
+        )
+        this.setState({
+            interval: interval
+        })
+
+        }
+
+
+
 
     
     resetInput  = () => {
@@ -59,7 +72,8 @@ class Timer extends Component {
       <div className="body">
           <h1 className="titre" >Enter the number of seconds</h1>
 <div className="cont">
-        <input type="text" id="ppt" onChange={this.change} />
+        <input type="text" id="ppt" /> 
+        <button onClick={this.change}>Convert</button> 
          <button onClick={this.tick}>play</button> 
          <button onClick={this.resetInput} id="valeur" >Reset</button>
           <button onClick={this.pause}>Stop</button> 
