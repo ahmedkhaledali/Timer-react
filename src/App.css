@@ -1,0 +1,45 @@
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+
+::selection{
+  background-color:red ;
+}
+.body{
+  background-color: rgba(248, 239, 186,1.0);
+}
+.titre{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: chocolate;
+  margin-top: 5%;
+}
+.cont{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 10%;
+  
+}
+.cont button{
+  background-color: black;
+  border: solid;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.resul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5%;
+  font-size: 30px;
+}
